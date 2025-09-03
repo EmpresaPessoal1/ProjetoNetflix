@@ -67,3 +67,83 @@ body {
     z-index: 1;
 
 }
+.banner-conteudo{
+    width: 600px;
+    position: relative;
+    z-index: 2;
+
+}
+.banner-titulo{
+    font-size: 3em;
+    margin-bottom: 20;
+
+}
+.banner-descricao{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.banner-btn{
+    background: #e50914;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    margin: 0 10px;
+}
+.banner-btn:hover{
+    box-shadow: 5px 5px 5px black;
+    transition: 0.5s;
+    transform: translateY(5px);
+    cursor: pointer;
+    /* transform: translate(5px); */
+    /* transform: scale(1000000%); */
+}
+.sessao-filmes{
+    padding: 20px;
+}
+.filme-titulo{
+    /* em acompanha a página e rem a página acompanha o título */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.carrossel{
+    position: relative;
+    overflow: hidden;
+}
+
+.carrossel img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease-in-out;
+    
+}
+.carrossel-lista{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.carrossel-item{
+    min-width: 200;
+    padding: 20px;
+
+}
+
+.btn-carrossel{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.btn-anterior{
+    left: 0;
+}
+.btn-proximo{
+    right: 0;
+}
