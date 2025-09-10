@@ -1,25 +1,56 @@
-// DECLARANDO AS VARIÁVEIS COM DOM (DOCUMENT MODEL OBJECT)
-// Pega somente o primeiro que ele encontrar
-const carrosselLista = document.querySelector(".carrossel-lista")
-// const carrosselLista = document.getElementsByClassName("carrossel-lista") <- mesma coisa que a linha de cima
-// pega todos com o mesmo nome
-const carrosselItem = document.querySelectorAll(".carrossel-item")
-const botaoAnterior = document.getElementsByClassName(".btn-anterior")
-const botaoProximo = document.getElementsByClassName(".btn-proximo")
+// Array de objetos com as imagens e infos do banner
 
-let contador = 0 
-const larguraItem=carrosselItem[0].offsetWitdh + 10; //Largura do item
+const bannerItens = [
+    {
+        image: "../assets/game1",
+        titulo: "Titulo do filme 1",
+        descricao: "Filme 1",
 
-botaoProximo.addEventListener("click", ()=> {
-    if (contador < carrosselItem.length -1){
-        contador++;
-        carrosselLista.style.transform =`translateX(-${contador * larguraItem}px)`;
+    },
+    {
+        image: "../assets/game2",
+        titulo: "Titulo do filme 2",
+        descricao: "Filme 2",
+
+    },
+    {
+        image: "../assets/game3",
+        titulo: "Titulo do filme 3",
+        descricao: "Filme 3",
+
     }
-})
+]
 
-botaoAnterior.addEventListener("click", ()=> {
-    if (contador > 0){
-        contador--;
-        carrosselLista.style.transform =`translateX(-${contador * larguraItem}px)`;
+// Declarando as variaveis e elementos com DOMException(Document Object Moder)
+const tempo = 5000; //tempo em ms
+const elementoBanner = document.querySelector(".banner");
+const elementoTitulo = document.querySelector(".banner-titulo");
+const elementoDescricao = document.querySelector(".banner-descricao");
+let i = 0;//inicio da contagem das imagens
+
+//Função para o slideshow
+
+function slideshow() {
+    //Altera a imagem de fundo do banner
+
+    //`` = template strings ou strings literais
+    elementoBanner.style.backgroundImage = `url(${bannerItens[i].image}/)`
+    //Altera o título do banner
+    elementoTitulo.textContent = bannerItens[i].titulo;
+    //Altera a descrição do banner
+    elementoTitulo.textContent = bannerItens[i].descricao;
+
+    //Incrementa o índice (i - que ta em zero né) e reinicia quando chegar no final do array - lê o zero e quando passar ele passa para o 1 e assim consequentemente.
+
+    i++; //é como se ele tivesse adicionando duas vezes --> i= 0 -> i = 1 + -> i = 2 +;
+    // Se o i for maior que a quantidade de imagens volta para o início
+    if (i > bannerItens.length) {
+        i = 0;
     }
-})
+    //chama a função novamente após o tempo definido
+    setTimeout(slideshow,tempo);
+
+}
+//inicia o slidesho/ início da função
+slideshow()
+

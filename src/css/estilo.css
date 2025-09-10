@@ -54,6 +54,7 @@ body {
     text-align: center;
     position: relative;
 }
+.banner-overlay{}
 /* pseudo elementos */
 .banner::before{
     content: "";
