@@ -264,27 +264,30 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 #texto-historia h1{
     color: #fff;
     font-size:40px;
     margin-bottom:30px;
     font-family: sans-serif;
+   
 }
 #texto-historia p{
     font-size: 17px;
     color: #fff; /*texto escuro para contraste*/
+    margin-left: 500px;
     
 }
 .imagens-historia img{
     width: 600px;
-    height: 400px;
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: -250px;
     flex-direction: row;
+    margin-left: 200px;
 }
 .historia-personagens{
     width: 100%;
@@ -300,14 +303,15 @@ footer {
 .historia-personagens p{
     color: #fff;
     font-size: 17px;
-    margin-left: -400px;
-    text-align: center;
+    margin-left: 40px;
+    margin-right: 400px;
+    margin-bottom: 300px;
 }
 .historia-personagens h1{
     color: #fff;
     font-size: 40px;
     margin-bottom: 50px;
-    margin-left: -400px;
+    margin-left: 40px;
     font-family: sans-serif;
 }
 .historia-personagens h3{
@@ -322,8 +326,9 @@ footer {
     width: 230px;
     height: 200px;
     margin-left: 800px;
-    flex-direction: column;
- 
+    justify-content: space-around;
+    
+    
 
 }
 .imagem-personagem1 .imagem-personagem2{
